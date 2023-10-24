@@ -2,10 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
+
 namespace act8
 {
     public partial class Form1 : Form
     {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
         public Stack<int> SumarStack(string num1, string num2)
         {
             Stack<int> Num1 = new Stack<int>();
@@ -66,15 +72,36 @@ namespace act8
             }
             return resultado;
         }
+
         private void buttonSumar_Click(object sender, EventArgs e)
         {
             string num1 = textBoxNum1.Text;
             string num2 = textBoxNum2.Text;
 
-            Form1 form = new Form1();
-            Stack<int> resultado = form.SumarStack(num1, num2);
+            Stack<int> resultado = SumarStack(num1, num2);
 
             textBoxResultado.Text = string.Join("", resultado);
+
+            // Limpiar las listas antes de mostrar el resultado
+            listBoxPilaNum1.Items.Clear();
+            listBoxPilaNum2.Items.Clear();
+            listBoxPilaResultado.Items.Clear();
+
+            // Llenar las listas con los valores de las pilas
+            foreach (char digito in num1)
+            {
+                listBoxPilaNum1.Items.Insert(0, int.Parse(digito.ToString()));
+            }
+
+            foreach (char digito in num2)
+            {
+                listBoxPilaNum2.Items.Insert(0, int.Parse(digito.ToString()));
+            }
+
+            while (resultado.Count > 0)
+            {
+                listBoxPilaResultado.Items.Insert(0, resultado.Pop());
+            }
         }
     }
 }

@@ -22,6 +22,9 @@
             this.buttonSumar = new System.Windows.Forms.Button();
             this.labelResultado = new System.Windows.Forms.Label();
             this.textBoxResultado = new System.Windows.Forms.TextBox();
+            this.listBoxPilaNum1 = new System.Windows.Forms.ListBox();
+            this.listBoxPilaNum2 = new System.Windows.Forms.ListBox();
+            this.listBoxPilaResultado = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // labelNum1
@@ -83,11 +86,38 @@
             this.textBoxResultado.Size = new System.Drawing.Size(97, 20);
             this.textBoxResultado.TabIndex = 6;
             // 
-            // MainForm
+            // listBoxPilaNum1
+            // 
+            this.listBoxPilaNum1.FormattingEnabled = true;
+            this.listBoxPilaNum1.Location = new System.Drawing.Point(191, 12);
+            this.listBoxPilaNum1.Name = "listBoxPilaNum1";
+            this.listBoxPilaNum1.Size = new System.Drawing.Size(40, 95);
+            this.listBoxPilaNum1.TabIndex = 7;
+            // 
+            // listBoxPilaNum2
+            // 
+            this.listBoxPilaNum2.FormattingEnabled = true;
+            this.listBoxPilaNum2.Location = new System.Drawing.Point(245, 12);
+            this.listBoxPilaNum2.Name = "listBoxPilaNum2";
+            this.listBoxPilaNum2.Size = new System.Drawing.Size(40, 95);
+            this.listBoxPilaNum2.TabIndex = 8;
+            // 
+            // listBoxPilaResultado
+            // 
+            this.listBoxPilaResultado.FormattingEnabled = true;
+            this.listBoxPilaResultado.Location = new System.Drawing.Point(299, 12);
+            this.listBoxPilaResultado.Name = "listBoxPilaResultado";
+            this.listBoxPilaResultado.Size = new System.Drawing.Size(40, 95);
+            this.listBoxPilaResultado.TabIndex = 9;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(181, 124);
+            this.ClientSize = new System.Drawing.Size(362, 124);
+            this.Controls.Add(this.listBoxPilaResultado);
+            this.Controls.Add(this.listBoxPilaNum2);
+            this.Controls.Add(this.listBoxPilaNum1);
             this.Controls.Add(this.textBoxResultado);
             this.Controls.Add(this.labelResultado);
             this.Controls.Add(this.buttonSumar);
@@ -95,7 +125,7 @@
             this.Controls.Add(this.textBoxNum1);
             this.Controls.Add(this.labelNum2);
             this.Controls.Add(this.labelNum1);
-            this.Name = "MainForm";
+            this.Name = "Form1";
             this.Text = "Calculadora";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,5 +138,8 @@
         private System.Windows.Forms.Button buttonSumar;
         private System.Windows.Forms.Label labelResultado;
         private System.Windows.Forms.TextBox textBoxResultado;
+        private System.Windows.Forms.ListBox listBoxPilaNum1;
+        private System.Windows.Forms.ListBox listBoxPilaNum2;
+        private System.Windows.Forms.ListBox listBoxPilaResultado;
     }
 }
